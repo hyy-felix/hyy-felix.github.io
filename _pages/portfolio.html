@@ -7,18 +7,24 @@ author_profile: true
 
 {% include base_path %}
 
-<section class="portfolio-grid">
-  {% for project in site.portfolio %}
-    <article class="portfolio-item">
-      <a href="{{ project.url | relative_url }}">
-        <div class="portfolio-thumb">
-          <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
-        </div>
-        <div class="portfolio-info">
-          <h2>{{ project.title }}</h2>
-          <p>{{ project.excerpt }}</p>
-        </div>
-      </a>
-    </article>
-  {% endfor %}
-</section>
+<div class="container">
+  {% if site.portfolio.size > 0 %}
+    <div class="portfolio-grid">
+      {% for project in site.portfolio %}
+        <article class="portfolio-item">
+          <a class="portfolio-link" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}">
+            <figure class="portfolio-thumb">
+              <img 
+                src="{{ project.image | default: '/images/default-thumb.png' | relative_url }}" 
+                alt="{{ project.title }} thumbnail" 
+                loading="lazy"
+              >
+            </figure>
+            <div class="portfolio-info">
+              <h2 class="portfolio-title">{{ project.title }}</h2>
+              <p class="portfolio-excerpt">{{ project.excerpt }}</p>
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
