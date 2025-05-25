@@ -9,9 +9,9 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Felix Hu / Site Title"
+title                    : "Felix Hu"
 title_separator          : "-"
-name                     : &name "Your Name"
+name                     : &name "Yongye Hu"
 description              : &description "personal description"
 url                      : https://hyy-felix.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,10 +26,10 @@ author:
   name             : "Your Sidebar Name"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  location         : "Berkeley, CA"
+  #employer         : "Red Brick University"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : hyy.felix@gmail.com 
 
   # Academic websites
   academia         : # URL
@@ -51,7 +51,7 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -60,7 +60,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "Yongye Hu"# Username
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
