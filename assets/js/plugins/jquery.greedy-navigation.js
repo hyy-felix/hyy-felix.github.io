@@ -1,9 +1,9 @@
 /*
-* Greedy Navigation
-*
-* http://codepen.io/lukejacksonn/pen/PwmwWV
-*
-*/
+ * Greedy Navigation
+ *
+ * http://codepen.io/lukejacksonn/pen/PwmwWV
+ *
+ */
 
 var $nav = $('#site-nav');
 var $btn = $('#site-nav button');
@@ -14,26 +14,34 @@ var $hlinks = $('#site-nav .hidden-links');
 var breaks = [];
 
 function updateNav() {
+  var availableSpace = $btn.hasClass('hidden')
+    ? $nav.width()
+    : $nav.width() - $btn.width() - 30;
 
-  var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
+  var minVisible = 5;  // 至少保留三项
 
   // The visible list is overflowing the nav
   if ($vlinks.width() > availableSpace) {
 
-    while ($vlinks.width() > availableSpace && $vlinks.children("*:not(.persist)").length > 0) {
+    // Only collapse if more than minVisible non-persist items remain
+    while (
+      $vlinks.width() > availableSpace &&
+      $vlinks.children("*:not(.persist)").length > minVisible
+    ) {
       // Record the width of the list
       breaks.push($vlinks.width());
 
       // Move item to the hidden list
       $vlinks.children("*:not(.persist)").last().prependTo($hlinks);
 
-      availableSpace = $btn.hasClass("hidden") ? $nav.width() : $nav.width() - $btn.width() - 30;
+      availableSpace = $btn.hasClass("hidden")
+        ? $nav.width()
+        : $nav.width() - $btn.width() - 30;
 
       // Show the dropdown btn
       $btn.removeClass("hidden");
     }
 
-    // The visible list is not overflowing
   } else {
 
     // There is space for another item in the nav
@@ -66,7 +74,6 @@ function updateNav() {
   } else {
     $(".sidebar").css("padding-top", mastheadHeight + "px");
   }
-
 }
 
 // Window listeners
