@@ -9,13 +9,17 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
-    <!-- site header styles -->
+    <!-- site header and layout styles -->
     <style>
       .site-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        background: var(--page-bg);
+        z-index: 1000;
       }
       .site-title a {
         font-size: 1.5rem;
@@ -33,13 +37,16 @@ layout: compress
         text-decoration: none;
         font-size: 1rem;
       }
+      .site-content {
+        padding: 2rem;
+      }
     </style>
   </head>
 
   <body>
 
     {% include browser-upgrade.html %}
-    <!-- replace masthead.html with custom header -->
+    <!-- custom sticky header with theme toggle -->
     <header class="site-header">
       <div class="site-title">
         <a href="{{ site.baseurl | prepend: site.url }}">{{ site.title }}</a>
@@ -53,9 +60,12 @@ layout: compress
           {% endfor %}
         </ul>
       </nav>
+      {% include theme-toggle.html %}
     </header>
 
-    {{ content }}
+    <main class="site-content">
+      {{ content }}
+    </main>
 
     <div class="page__footer">
       <footer>
@@ -63,6 +73,11 @@ layout: compress
         {% include footer.html %}
       </footer>
     </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>
 
     {% include scripts.html %}
 
