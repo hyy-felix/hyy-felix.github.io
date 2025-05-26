@@ -63,17 +63,6 @@
         </li>
       {% endif %}
 
-<!-- Inline QR image -->
-      {% if author.wechat_qr %}
-        <li class="wechat-qr">
-          <a href="{{ author.wechat_qr | relative_url }}" target="_blank">
-            <img src="{{ author.wechat_qr | relative_url }}"
-                 alt="WeChat QR code for {{ author.wechat }}"
-                 style="max-width:80px; display:block; margin-top:0.5rem;">
-          </a>
-        </li>
-      {% endif %}
-
       <!-- Font Awesome and Academicons icons / Academic websites -->
       {% if author.academia %}
         <li>
