@@ -128,3 +128,10 @@
   padding: 0.5rem;
   box-sizing: border-box;
 }
+
+.contact-form button {
+  width: 8rem;      /* 8 × 根元素字体大小 */
+  padding: 0.25rem 0.75rem;
+  justify-self: start;
+}
+
