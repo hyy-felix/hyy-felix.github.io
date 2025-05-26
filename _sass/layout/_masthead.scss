@@ -71,29 +71,3 @@
     margin-right: auto !important;
   }
 }
-
-/* 只隐藏折叠按钮（下拉触发器），不动可见链接 */
-.greedy-nav > button {
-  display: none !important;
-}
-
-/* 隐藏折叠到下拉里的那些链接 */
-.greedy-nav .hidden-links {
-  display: none !important;
-}
-
-/* 强制把“可见链接容器”用 flex 排好 */
-.greedy-nav .visible-links {
-  display: flex !important;        /* 变成横向 flex 容器 */
-  flex-wrap: nowrap !important;    /* 禁止换行 */
-  width: 100% !important;          /* 撑满父容器 */
-  align-items: center !important;
-}
-
-/* 如果可见链接的实际列表是在 ul 里，再额外强制 */
-.greedy-nav .visible-links ul {
-  display: flex !important;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
