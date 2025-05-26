@@ -106,7 +106,7 @@
   display: grid;
   grid-template-columns: 1fr;
   /* smaller row gap now */
-  row-gap: 0.1rem;
+  row-gap: 0.2rem;
   /* single column, so only care about vertical spacing here */
 }
 
@@ -127,17 +127,4 @@
   margin-bottom: 0; /* we’re handling spacing via grid gaps now */
   padding: 0.5rem;
   box-sizing: border-box;
-}
-
-/* labels: give just a bit of breathing room */
-.contact-form label {
-  margin-bottom: 0.25rem;
-}
-
-/* Button only as big as its text */
-.contact-form button {
-  display: inline-block;
-  width: auto;
-  padding: 0.5rem 1rem;
-  margin-top: 0.75rem; /* space above button matching row-gap */
 }
