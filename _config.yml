@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Home"
+title                    : "Home | About Me"
 title_separator          : "-"
 name                     : &name "Yongye Hu"
 description              : &description "personal description"
