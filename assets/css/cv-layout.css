@@ -47,7 +47,6 @@
   right: calc((100% - 1000px) / 2);
   width: 180px;
   z-index: 10;
-  font-weight: bold;
 }
 
 #cv-nav ul {
@@ -68,6 +67,12 @@
 
 #cv-nav a.active {
   color: var(--global-accent-color); 
+}
+
+body.page-cv .archive {
+  max-width: 800px;   /* ✅ 控制 resume 页面主内容最大宽度 */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Ensure main content doesn't get hidden under nav */
