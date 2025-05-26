@@ -9,73 +9,42 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
-    <!-- header, content padding, and bottom toggle styles -->
     <style>
-      .site-header {
+      /* Flex container for main + sidebar */
+      .layout-wrapper {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        position: sticky;
-        top: 0;
-        background: var(--page-bg);
-        z-index: 1000;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
       }
-      .site-title a {
-        text-decoration: none;
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
-      .site-nav ul {
-        display: flex;
-        gap: 1rem;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-      .site-nav a {
-        font-size: 1rem;
-        text-decoration: none;
-      }
-      .site-content {
-        padding: 2rem 3rem;
-      }
-      .theme-toggle-bottom {
-        text-align: center;
-        margin: 2rem 0;
-      }
-      .theme-toggle-bottom button {
-        background: none;
-        border: 1px solid var(--text-color);
-        border-radius: 0.25rem;
-        padding: 0.5rem 1rem;
-        cursor: pointer;
-        font-size: 1rem;
-      }
+      .layout-content { flex: 1; }
+      .layout-sidebar { width: 250px; }
+      .layout-sidebar h2 { margin-top: 0; }
     </style>
   </head>
+
   <body>
     {% include browser-upgrade.html %}
+    {% include masthead.html %}
 
-    <!-- custom header with title left, collections (nav) right -->
-    <header class="site-header">
-      <div class="site-title">
-        <a href="{{ site.baseurl | prepend: site.url }}">{{ site.title }}</a>
+    <div class="layout-wrapper">
+      <!-- Main content -->
+      <div class="layout-content">
+        {{ content }}
       </div>
-      <nav class="site-nav">
+
+      <!-- Right-hand collections list -->
+      <aside class="layout-sidebar">
+        <h2>Collections</h2>
         <ul>
-          {% for nav in site.data.navigation.main %}
-          <li><a href="{{ nav.url | relative_url }}">{{ nav.title }}</a></li>
+          {% for name, coll in site.collections %}
+            {% unless name == "posts" %}
+              <li><a href="{{ coll.url | relative_url }}">{{ name | capitalize }}</a></li>
+            {% endunless %}
           {% endfor %}
         </ul>
-      </nav>
-    </header>
-
-    {{ content }}
-
-    <!-- bottom-theme-toggle replicating original logic -->
-    <div class="theme-toggle-bottom">
-      <button id="theme-toggle-btn" aria-label="Toggle theme">Toggle Theme</button>
+      </aside>
     </div>
 
     <div class="page__footer">
@@ -86,25 +55,5 @@ layout: compress
     </div>
 
     {% include scripts.html %}
-
-    <!-- inline theme toggle script -->
-    <script>
-      (function() {
-        const btn = document.getElementById('theme-toggle-btn');
-        const root = document.documentElement;
-        function applyTheme(theme) {
-          root.setAttribute('data-theme', theme);
-          localStorage.setItem('theme', theme);
-        }
-        document.addEventListener('DOMContentLoaded', () => {
-          const saved = localStorage.getItem('theme');
-          if (saved) applyTheme(saved);
-        });
-        btn.addEventListener('click', () => {
-          const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-          applyTheme(current === 'dark' ? 'light' : 'dark');
-        });
-      })();
-    </script>
   </body>
 </html>
