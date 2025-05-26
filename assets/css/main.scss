@@ -127,6 +127,13 @@
   margin-bottom: 0; /* we’re handling spacing via grid gaps now */
   padding: 0.5rem;
   box-sizing: border-box;
+  color: #333333;
+}
+
+/* Lighter gray for the placeholder hint text */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999999;
 }
 
 .contact-form label {
