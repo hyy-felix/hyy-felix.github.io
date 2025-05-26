@@ -31,6 +31,7 @@ author:
   uri              : # URL
   email            : "hyy.felix@gmail.com"
   wechat           : "felix_hyy"
+  wechat_qr        : "/images/wechat-qr.png"
 
   # Academic websites
   academia         : # URL
