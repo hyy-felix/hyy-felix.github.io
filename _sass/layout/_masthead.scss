@@ -53,7 +53,7 @@
 
     // 使菜单变为弹性容器
     display: flex !important;
-    align-items: center;
+    align-items: center !important;
   }
 }
 
@@ -71,3 +71,5 @@
     margin-right: auto !important;
   }
 }
+
+
