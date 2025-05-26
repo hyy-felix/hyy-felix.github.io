@@ -124,16 +124,11 @@
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  margin-bottom: 0; /* we’re handling spacing via grid gaps now */
+  margin-bottom: 0;
   padding: 0.5rem;
   box-sizing: border-box;
-  color: #333333;
-}
-
-/* Lighter gray for the placeholder hint text */
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #999999;
+  color: #333333;           /* deep grey for user‐typed text */
+  background: #fff;         /* ensure a white background */
 }
 
 .contact-form label {
