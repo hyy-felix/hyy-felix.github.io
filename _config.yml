@@ -23,13 +23,14 @@ repository               : "hyy-felix.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Felix Hu"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
   location         : "Berkeley, CA"
   #employer         : "Red Brick University"
   uri              : # URL
-  email            : hyy.felix@gmail.com 
+  email            : "hyy.felix@gmail.com"
+  wechat           : "felix_hyy"
 
   # Academic websites
   academia         : # URL
@@ -60,7 +61,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "Yongye Hu"# Username
+  linkedin         : "hyy-felix" # Username
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
