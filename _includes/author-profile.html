@@ -54,15 +54,23 @@
       {% endif %}
 
       <!-- ========== WeChat Fields ========== -->
-      {% if author.wechat %}
+      {% if author.wechat and author.wechat_qr %}
         <li>
-          <i class="fab fa-fw fa-weixin icon-pad-right" aria-hidden="true"></i>
-          {{ author.wechat }}
+          <a href="{{ author.wechat_qr | relative_url }}" target="_blank" title="Scan my WeChat QR">
+            <i class="fab fa-fw fa-weixin icon-pad-right"></i>
+            {{ author.wechat }}
+          </a>
         </li>
       {% endif %}
+
+<!-- Inline QR image -->
       {% if author.wechat_qr %}
         <li class="wechat-qr">
-          <img src="{{ author.wechat_qr | relative_url }}" alt="WeChat QR" style="max-width:80px;">
+          <a href="{{ author.wechat_qr | relative_url }}" target="_blank">
+            <img src="{{ author.wechat_qr | relative_url }}"
+                 alt="WeChat QR code for {{ author.wechat }}"
+                 style="max-width:80px; display:block; margin-top:0.5rem;">
+          </a>
         </li>
       {% endif %}
 
