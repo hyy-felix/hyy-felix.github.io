@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% endif %}
+
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+<style>
+  /* 可放入你的 main.scss 或 custom.scss 中，或保持内联用于测试 */
+  #main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .archive-scroll-sidebar {
+    flex: 0 0 auto; /* 保持 sidebar 原始宽度 */
+  }
+
+  .archive-scroll-content {
+    flex: 1 1 auto;
+    max-height: 85vh; /* 或 100vh 根据你需要调整 */
+    overflow-y: auto;
+    padding: 1em;
+  }
+
+  .archive-scroll-content h1 {
+    margin-top: 0;
+  }
+
+  /* 可选优化：在有滚动条时也保持右侧内边距 */
+  .archive-scroll-content::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .archive-scroll-content::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.4);
+    border-radius: 4px;
+  }
+</style>
+
+<div id="main" role="main">
+  <div class="archive-scroll-sidebar">
+    {% include sidebar.html %}
+  </div>
+
+  <div class="archive-scroll-content">
+    {% unless page.header.overlay_color or page.header.overlay_image %}
+      <h1 class="page__title">{{ page.title }}</h1>
+    {% endunless %}
+    {{ content }}
+  </div>
+</div>
