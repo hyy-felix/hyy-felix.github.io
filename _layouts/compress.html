@@ -5,6 +5,7 @@
 # © 2014–2015 Anatol Broder
 # MIT License
 ---
+
 {% capture _LINE_FEED %}{% endcapture %}
 
 {% if site.compress_html.ignore.envs contains jekyll.environment %}
@@ -16,9 +17,13 @@
     <aside class="layout-sidebar">
       <h2 class="nav__title">Collections</h2>
       <ul class="nav__list">
-        {% for name, coll in site.collections %}
-          {% unless name == "posts" %}
-            <li><a href="{{ coll.url | relative_url }}">{{ name | capitalize }}</a></li>
+        {% for coll in site.collections %}
+          {% unless coll.label == "posts" %}
+            <li>
+              <a href="{{ coll.url | relative_url }}">
+                {{ coll.label | capitalize }}
+              </a>
+            </li>
           {% endunless %}
         {% endfor %}
       </ul>
@@ -144,9 +149,13 @@
     <aside class="layout-sidebar">
       <h2 class="nav__title">Collections</h2>
       <ul class="nav__list">
-        {% for name, coll in site.collections %}
-          {% unless name == "posts" %}
-            <li><a href="{{ coll.url | relative_url }}">{{ name | capitalize }}</a></li>
+        {% for coll in site.collections %}
+          {% unless coll.label == "posts" %}
+            <li>
+              <a href="{{ coll.url | relative_url }}">
+                {{ coll.label | capitalize }}
+              </a>
+            </li>
           {% endunless %}
         {% endfor %}
       </ul>
