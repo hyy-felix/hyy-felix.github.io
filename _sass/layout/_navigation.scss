@@ -442,3 +442,12 @@
     }
   }
 }
+
+.nav__list ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list ul li:nth-child(2) {
+  margin-left: auto;
+}
