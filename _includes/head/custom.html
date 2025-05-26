@@ -18,15 +18,24 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <!-- end custom head snippets -->
-<style>
-  /* 让 visible-links 真正成为 flex 容器 */
-  nav.greedy-nav ul.visible-links {
-    display: flex !important;
-    align-items: center !important;
-  }
 
-  /* 将带 .persist（标题）的那一项右推 */
-  nav.greedy-nav ul.visible-links li.persist {
-    margin-right: auto !important;
-  }
-</style>
+/* make the nav list flex and push it right */
+.masthead__inner-wrap {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/* title stays at start; the UL fills the rest */
+.site-nav {
+  margin-left: auto;
+}
+
+/* lay out each link horizontally */
+.site-nav .masthead__menu-items {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
