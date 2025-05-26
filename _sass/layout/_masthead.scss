@@ -50,10 +50,6 @@
     padding: 0;
     clear: both;
     list-style-type: none;
-
-    // 使菜单变为弹性容器
-    display: flex !important;
-    align-items: center;
   }
 }
 
@@ -66,8 +62,5 @@
   &--lg {
     padding-right: 2em;
     font-weight: 700;
-
-    /* 方案 B：把 Home 这一项向左推，后面全部靠右 */
-    margin-right: auto !important;
   }
 }
