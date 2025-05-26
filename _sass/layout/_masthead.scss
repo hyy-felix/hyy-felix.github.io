@@ -51,15 +51,6 @@
     padding: 0;
     clear: both;
     list-style-type: none;
-
-    /* === 新增：Flex 布局 & 推送其余项至右 === */
-    display: flex;
-    align-items: center;
-
-    /* 方案 A：将第一个菜单项（Home）推到左侧，其他项目靠右 */
-    li:first-child {
-      margin-right: auto;
-    }
   }
 }
 
@@ -68,6 +59,10 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
+
+.masthead__menu-item--lg {
+  margin-right: 1pt !important;
+}
 
   &--lg {
     padding-right: 2em;
