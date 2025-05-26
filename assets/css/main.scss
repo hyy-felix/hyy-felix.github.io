@@ -101,38 +101,42 @@
   }
 }
 
-/* Contact form—two-column grid rows */
+/* Contact form – tighter gaps */
 .contact-form {
   display: grid;
-  grid-template-columns: 1fr;    /* default to single column */
-  gap: 1.5rem;                   /* space between all rows */
+  grid-template-columns: 1fr;
+  /* smaller row gap now */
+  row-gap: 0.75rem;
+  /* single column, so only care about vertical spacing here */
 }
 
 .contact-form .two-col {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* exactly two equal cols */
-  gap: 1rem;                      /* gutter between the two fields */
+  /* keep the two columns */
+  grid-template-columns: 1fr 1fr;
+  /* a little horizontal cushion */
+  column-gap: 1rem;
+  /* match the vertical gap above */
+  row-gap: 0.75rem;
 }
 
-.contact-form .two-col .col {
-  display: flex;
-  flex-direction: column;
+/* inputs/textareas: reduce their bottom margin */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 0; /* we’re handling spacing via grid gaps now */
+  padding: 0.5rem;
+  box-sizing: border-box;
 }
 
+/* labels: give just a bit of breathing room */
 .contact-form label {
   margin-bottom: 0.25rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  margin-bottom: 1rem;
-  box-sizing: border-box;
-}
-
-/* on narrow screens, stack back to one column */
-@media (max-width: 600px) {
-  .contact-form .two-col {
-    grid-template-columns: 1fr;
-  }
-}
+/* Button only as big as its text */
+.contact-form button {
+  display: inline-block;
+  width: auto;
+  padding: 0.5rem 1rem;
+  margin-top: 0.75rem; /* space above button matching row-gap */
