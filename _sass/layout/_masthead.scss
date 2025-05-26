@@ -52,7 +52,7 @@
     list-style-type: none;
 
     // 使菜单变为弹性容器
-    display: flex;
+    display: flex !important;
     align-items: center;
   }
 }
