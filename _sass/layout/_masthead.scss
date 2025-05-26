@@ -26,7 +26,7 @@
 
   &__inner-wrap {
     @include container;
-    /*@include clearfix;*/
+    @include clearfix;
     padding: 0.5em 1em;
     font-family: $sans-serif-narrow;
 
@@ -45,23 +45,24 @@
 }
 
 .masthead__menu {
+
   ul {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    width: 100% !important;
     margin: 0;
     padding: 0;
-    list-style: none;
-    align-items: center;
-  }
+    clear: both;
+    list-style-type: none;
 
-  /* ← this must be *inside* the .masthead__menu block */
-  ul > li:first-child {
-    margin-right: auto !important;
+    /* === 新增：Flex 布局 & 推送其余项至右 === */
+    display: flex;
+    align-items: center;
+
+    /* 方案 A：将第一个菜单项（Home）推到左侧，其他项目靠右 */
+    li:first-child {
+      margin-right: auto;
+    }
   }
 }
 
-/* your existing modifier for “Home” can remain, but no more auto-margin here */
 .masthead__menu-item {
   background-color: var(--global-bg-color);
   display: block;
