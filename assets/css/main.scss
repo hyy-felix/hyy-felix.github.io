@@ -101,23 +101,38 @@
   }
 }
 
-/* contact form two-column rows */
-.form-row {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+/* Contact form—two-column grid rows */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr;    /* default to single column */
+  gap: 1.5rem;                   /* space between all rows */
 }
-.form-group {
-  flex: 1;
+
+.contact-form .two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* exactly two equal cols */
+  gap: 1rem;                      /* gutter between the two fields */
+}
+
+.contact-form .two-col .col {
   display: flex;
   flex-direction: column;
 }
-.form-group label {
+
+.contact-form label {
   margin-bottom: 0.25rem;
 }
 
-/* fallback: full width for single fields */
-input, textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+/* on narrow screens, stack back to one column */
+@media (max-width: 600px) {
+  .contact-form .two-col {
+    grid-template-columns: 1fr;
+  }
 }
