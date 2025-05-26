@@ -44,6 +44,10 @@
   }
 }
 
+/* --------------------------------------------------------------------------
+   FORCE HORIZONTAL FLEX NAV & PUSH “HOME” LEFT
+   -------------------------------------------------------------------------- */
+
 .masthead__menu {
   ul {
     margin: 0;
@@ -51,9 +55,17 @@
     clear: both;
     list-style-type: none;
 
-    // 使菜单变为弹性容器
+    /* 强制开启水平不换行的 Flex 布局 */
     display: flex !important;
-    align-items: center !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    align-items: center;
+  }
+
+  /* 把第一个菜单项（Home）推到左侧，其它项靠右 */
+  ul > li:first-child {
+    margin-right: auto !important;
   }
 }
 
@@ -66,10 +78,5 @@
   &--lg {
     padding-right: 2em;
     font-weight: 700;
-
-    /* 方案 B：把 Home 这一项向左推，后面全部靠右 */
-    margin-right: auto !important;
   }
 }
-
-
