@@ -9,43 +9,14 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
-    <style>
-      /* Flex container for main + sidebar */
-      .layout-wrapper {
-        display: flex;
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem 1rem;
-      }
-      .layout-content { flex: 1; }
-      .layout-sidebar { width: 250px; }
-      .layout-sidebar h2 { margin-top: 0; }
-    </style>
   </head>
 
   <body>
+
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
-    <div class="layout-wrapper">
-      <!-- Main content -->
-      <div class="layout-content">
-        {{ content }}
-      </div>
-
-      <!-- Right-hand collections list -->
-      <aside class="layout-sidebar">
-        <h2>Collections</h2>
-        <ul>
-          {% for name, coll in site.collections %}
-            {% unless name == "posts" %}
-              <li><a href="{{ coll.url | relative_url }}">{{ name | capitalize }}</a></li>
-            {% endunless %}
-          {% endfor %}
-        </ul>
-      </aside>
-    </div>
+    {{ content }}
 
     <div class="page__footer">
       <footer>
@@ -55,5 +26,6 @@ layout: compress
     </div>
 
     {% include scripts.html %}
+
   </body>
 </html>
