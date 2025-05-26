@@ -46,17 +46,22 @@
 
 .masthead__menu {
   ul {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
     margin: 0;
     padding: 0;
-    /*clear: both;*/
-    list-style-type: none;
-
-    // 使菜单变为弹性容器
-    display: flex !important;
+    list-style: none;
     align-items: center;
+  }
+
+  /* ← this must be *inside* the .masthead__menu block */
+  ul > li:first-child {
+    margin-right: auto !important;
   }
 }
 
+/* your existing modifier for “Home” can remain, but no more auto-margin here */
 .masthead__menu-item {
   background-color: var(--global-bg-color);
   display: block;
@@ -66,8 +71,5 @@
   &--lg {
     padding-right: 2em;
     font-weight: 700;
-
-    /* 方案 B：把 Home 这一项向左推，后面全部靠右 */
-    margin-right: auto !important;
   }
 }
