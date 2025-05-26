@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: archive_scroll
 title: "CV"
 permalink: /cv/
 author_profile: true
