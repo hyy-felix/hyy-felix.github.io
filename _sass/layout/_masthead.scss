@@ -46,10 +46,17 @@
 
 .masthead__menu {
   ul {
+    display: flex !important;            // 横向排列
+    flex-wrap: nowrap;        // 不折行
+    align-items: center;      // 垂直居中
     margin: 0;
     padding: 0;
-    clear: both;
-    list-style-type: none;
+    list-style: none;
+  }
+
+  // 将第一个 li（Home）推到最左，其它自然靠右
+  ul > li:first-child {
+    margin-right: auto !important;
   }
 }
 
