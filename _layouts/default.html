@@ -9,12 +9,51 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    <!-- site header styles -->
+    <style>
+      .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+      }
+      .site-title a {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .site-nav .nav__list {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .site-nav .nav__link {
+        text-decoration: none;
+        font-size: 1rem;
+      }
+    </style>
   </head>
 
   <body>
 
     {% include browser-upgrade.html %}
-    {% include masthead.html %}
+    <!-- replace masthead.html with custom header -->
+    <header class="site-header">
+      <div class="site-title">
+        <a href="{{ site.baseurl | prepend: site.url }}">{{ site.title }}</a>
+      </div>
+      <nav class="site-nav">
+        <ul class="nav__list">
+          {% for nav in site.data.navigation.main %}
+          <li class="nav__item">
+            <a href="{{ nav.url | relative_url }}" class="nav__link">{{ nav.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
 
     {{ content }}
 
