@@ -1,6 +1,6 @@
 ---
-layout: archive_scroll
-title: "CV"
+layout: archive
+title: "Resume"
 permalink: /cv/
 author_profile: true
 redirect_from:
