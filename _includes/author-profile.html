@@ -48,16 +48,6 @@
         <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
       {% endif %}
 
-      <!-- ========== WeChat Fields ========== -->
-      {% if author.wechat and author.wechat_qr %}
-        <li>
-          <a href="{{ author.wechat_qr | relative_url }}" target="_blank" title="Scan my WeChat QR">
-            <i class="ai ai-academia ai-fw icon-pad-right" aria-hidden="true"></i>Wechat
-            {{ author.wechat }}
-          </a>
-        </li>
-      {% endif %}
-
       <!-- Font Awesome and Academicons icons / Academic websites -->
       {% if author.academia %}
         <li>
@@ -142,6 +132,15 @@
         <li>
           <a href="https://dribbble.com/{{ author.dribbble }}">
             <i class="fab fa-fw fa-dribbble icon-pad-right" aria-hidden="true"></i>Dribbble
+          </a>
+        </li>
+      {% endif %}
+      <!-- ========== WeChat Fields ========== -->
+      {% if author.wechat and author.wechat_qr %}
+        <li>
+          <a href="{{ author.wechat_qr | relative_url }}" target="_blank" title="Scan my WeChat QR">
+            <i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>Wechat
+            {{ author.wechat }}
           </a>
         </li>
       {% endif %}
