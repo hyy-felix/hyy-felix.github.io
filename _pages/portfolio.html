@@ -5,18 +5,23 @@ permalink: /portfolio/
 author_profile: true
 ---
 
-<section class="portfolio-grid">
+{% include base_path %}
+
+<div class="portfolio-container">
   {% for project in site.portfolio %}
-    <article class="portfolio-item">
-      <a href="{{ project.url | relative_url }}">
-        <div class="portfolio-thumb">
+  <div class="portfolio-card">
+    <a href="{{ project.url | relative_url }}">
+      <div class="portfolio-card-image">
+        {% if project.image %}
           <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
-        </div>
-        <div class="portfolio-info">
-          <h2>{{ project.title }}</h2>
-          <p>{{ project.excerpt }}</p>
-        </div>
-      </a>
-    </article>
+        {% elsif project.excerpt contains '<img' %}
+          {{ project.excerpt | split:'<br/>' | last | strip }}
+        {% endif %}
+      </div>
+      <div class="portfolio-card-content">
+        <h3>{{ project.title }}</h3>
+      </div>
+    </a>
+  </div>
   {% endfor %}
-</section>
+</div>
