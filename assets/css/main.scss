@@ -106,7 +106,7 @@
   display: grid;
   grid-template-columns: 1fr;
   /* smaller row gap now */
-  row-gap: 0.2rem;
+  row-gap: 0.3rem;
   /* single column, so only care about vertical spacing here */
 }
 
@@ -129,8 +129,13 @@
   box-sizing: border-box;
 }
 
+.contact-form label {
+  margin-bottom: 0.15rem;  /* space between a label and the next element */
+}
+
 .contact-form button {
   width: 8rem;      /* 8 × 根元素字体大小 */
+  margin-top: 0.3rem
   padding: 0.25rem 0.75rem;
   justify-self: start;
 }
