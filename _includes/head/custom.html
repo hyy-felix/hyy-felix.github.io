@@ -19,23 +19,32 @@
 
 <!-- end custom head snippets -->
 
-/* make the nav list flex and push it right */
-.masthead__inner-wrap {
-  display: flex;
-  align-items: center;
-  padding: 1rem 2rem;
-}
+<style>
+  /* 1. 强制 greedy-nav 平铺并隐藏折叠按钮 */
+  nav.greedy-nav {
+    display: flex !important;
+    align-items: center !important;
+  }
+  nav.greedy-nav > button {
+    display: none !important;
+  }
 
-/* title stays at start; the UL fills the rest */
-.site-nav {
-  margin-left: auto;
-}
+  /* 2. 平铺所有可见链接，隐藏隐藏链接容器 */
+  nav.greedy-nav ul.visible-links {
+    display: flex !important;
+    align-items: center !important;
+  }
+  nav.greedy-nav ul.hidden-links {
+    display: none !important;
+  }
 
-/* lay out each link horizontally */
-.site-nav .masthead__menu-items {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+  /* 3. 站点标题后推，collection 链接靠右 */
+  nav.greedy-nav ul.visible-links li.persist {
+    margin-right: auto !important;
+  }
+
+  /* 4. 链接之间留点空隙 */
+  nav.greedy-nav ul.visible-links li {
+    margin: 0 0.5rem !important;
+  }
+</style>
