@@ -52,7 +52,8 @@
 }
 
 .portfolio-card {
-  width: calc(50% - 1rem);
+  /* Three per row: 100%/3 minus gutter space */
+  width: calc(33.333% - 1rem);
   margin: 0.5rem;
   background: #fff;
   border: 1px solid #ddd;
@@ -89,9 +90,17 @@
   line-height: 1.3;
 }
 
-/* mobile: stack to single column */
+/* tablets: two per row */
+@media (max-width: 1024px) {
+  .portfolio-card {
+    width: calc(50% - 1rem);
+  }
+}
+
+/* phones: one per row */
 @media (max-width: 768px) {
   .portfolio-card {
     width: 100% !important;
   }
+}
 }
