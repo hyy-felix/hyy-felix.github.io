@@ -10,7 +10,7 @@ redirect_from:
 <a href="{{ '/files/Resume_520.pdf' | relative_url }}"
    title="Download Résumé PDF"
    download
-   style="float: right; font-size: 1.2rem; margin-top: -2.5rem;">
+   style="float: right; font-size: 1.5rem; margin-top: -2.5rem; margin-right: 1rem;">
   <i class="fas fa-file-pdf" style="color: var(--global-link-color);"></i>
 </a>
 
