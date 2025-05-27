@@ -70,7 +70,7 @@
 }
 
 body.page-cv .archive {
-  max-width: 800px !important;   /* ✅ 控制 resume 页面主内容最大宽度 */
+  max-width: 800px;   /* ✅ 控制 resume 页面主内容最大宽度 */
   margin-left: auto;
   margin-right: auto;
 }
