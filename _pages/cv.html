@@ -123,7 +123,7 @@ body.page-cv .archive {
 
 <!-- ========== Sections ========== -->
 
-<div class="cv-section" id="education">
+<!--<div class="cv-section" id="education">
   <h2>Education</h2>
 
   <div class="cv-entry-row">
@@ -192,45 +192,161 @@ body.page-cv .archive {
     <h3 class="cv-institution">GitHub University</h3>
     <p class="cv-degree">B.S. in GitHub</p>
   </div>
+</div>-->
+
+<div class="cv-section" id="education">
+  <h2>Education</h2>
+
+  <div class="cv-entry-row">
+    <div class="cv-entry-left">
+      <div class="cv-entry-date">2018 (expected)</div>
+      <div class="cv-entry-location">GitHub University</div>
+    </div>
+    <div class="cv-entry-right">
+      <div class="cv-entry-title">GitHub University</div>
+      <div class="cv-entry-degree">Ph.D in Version Control Theory</div>
+    </div>
+  </div>
+
+  <div class="cv-entry-row">
+    <div class="cv-entry-left">
+      <div class="cv-entry-date">2014</div>
+      <div class="cv-entry-location">GitHub University</div>
+    </div>
+    <div class="cv-entry-right">
+      <div class="cv-entry-title">GitHub University</div>
+      <div class="cv-entry-degree">M.S. in Jekyll</div>
+    </div>
+  </div>
+
+  <div class="cv-entry-row">
+    <div class="cv-entry-left">
+      <div class="cv-entry-date">2012</div>
+      <div class="cv-entry-location">GitHub University</div>
+    </div>
+    <div class="cv-entry-right">
+      <div class="cv-entry-title">GitHub University</div>
+      <div class="cv-entry-degree">B.S. in GitHub</div>
+    </div>
+  </div>
 </div>
 
-<h2 id="education">Education</h2>
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+<div class="cv-section" id="work">
+  <h2>Work Experience</h2>
 
-<h2 id="work">Work experience</h2>
-* Spring 2024: Academic Pages Collaborator  
-  * Duties: Template updates, GitHub University  
-* Fall 2015: Research Assistant  
-  * Duties: Merging PRs  
-* Summer 2015: Research Assistant  
-  * Duties: Tagging issues
+  <div class="cv-entry-row">
+    <div class="cv-entry-left">
+      <div class="cv-entry-date">Spring 2024</div>
+      <div class="cv-entry-location">GitHub University</div>
+    </div>
+    <div class="cv-entry-right">
+      <div class="cv-entry-title">Academic Pages Collaborator</div>
+      <div class="cv-entry-degree">Duties: Template updates</div>
+    </div>
+  </div>
 
-<h2 id="skills">Skills</h2>
-* Skill 1  
-* Skill 2  
-  * Sub-skill 2.1  
-  * Sub-skill 2.2  
-* Skill 3
+  <div class="cv-entry-row">
+    <div class="cv-entry-left">
+      <div class="cv-entry-date">Fall 2015</div>
+      <div class="cv-entry-location">GitHub University</div>
+    </div>
+    <div class="cv-entry-right">
+      <div class="cv-entry-title">Research Assistant</div>
+      <div class="cv-entry-degree">Duties: Merging PRs</div>
+    </div>
+  </div>
 
-<h2 id="publications">Publications</h2>
-<ul>{% for post in site.publications reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}</ul>
+  <div class="cv-entry-row">
+    <div class="cv-entry-left">
+      <div class="cv-entry-date">Summer 2015</div>
+      <div class="cv-entry-location">GitHub University</div>
+    </div>
+    <div class="cv-entry-right">
+      <div class="cv-entry-title">Research Assistant</div>
+      <div class="cv-entry-degree">Duties: Tagging issues</div>
+    </div>
+  </div>
+</div>
 
-<h2 id="talks">Talks</h2>
-<ul>{% for post in site.talks reversed %}
-  {% include archive-single-talk-cv.html  %}
-{% endfor %}</ul>
+<div class="cv-section" id="skills">
+  <h2>Skills</h2>
 
-<h2 id="teaching">Teaching</h2>
-<ul>{% for post in site.teaching reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}</ul>
+  <div class="cv-entry-row">
+    <div class="cv-entry-left">
+      <div class="cv-entry-date"> </div>
+    </div>
+    <div class="cv-entry-right">
+      <ul>
+        <li>Skill 1</li>
+        <li>Skill 2
+          <ul>
+            <li>Sub-skill 2.1</li>
+            <li>Sub-skill 2.2</li>
+          </ul>
+        </li>
+        <li>Skill 3</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-<h2 id="service">Service and leadership</h2>
-* Currently signed in to 43 different Slack teams
+<div class="cv-section" id="publications">
+  <h2>Publications</h2>
+
+  <div class="cv-entry-row">
+    <div class="cv-entry-left"></div>
+    <div class="cv-entry-right">
+      <ul>
+        {% for post in site.publications reversed %}
+          {% include archive-single-cv.html %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="cv-section" id="talks">
+  <h2>Talks</h2>
+
+  <div class="cv-entry-row">
+    <div class="cv-entry-left"></div>
+    <div class="cv-entry-right">
+      <ul>
+        {% for post in site.talks reversed %}
+          {% include archive-single-talk-cv.html %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="cv-section" id="teaching">
+  <h2>Teaching</h2>
+
+  <div class="cv-entry-row">
+    <div class="cv-entry-left"></div>
+    <div class="cv-entry-right">
+      <ul>
+        {% for post in site.teaching reversed %}
+          {% include archive-single-cv.html %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="cv-section" id="service">
+  <h2>Service and Leadership</h2>
+
+  <div class="cv-entry-row">
+    <div class="cv-entry-left"></div>
+    <div class="cv-entry-right">
+      <ul>
+        <li>Currently signed in to 43 different Slack teams</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 <!-- ========== ScrollSpy Script ========== -->
 <script>
