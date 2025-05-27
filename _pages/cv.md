@@ -22,23 +22,6 @@ redirect_from:
 
 {% include base_path %}
 
-<!-- ========== CSS Styling ========== -->
-<style>
-#cv-nav {
-  position: fixed;
-  top: 120px;
-  right: 40px;
-  width: 180px;
-  z-index: 10;
-  font-weight: bold;
-}
-#cv-nav ul { list-style: none; padding-left: 0; margin: 0; }
-#cv-nav li { margin-bottom: 0.6em; }
-#cv-nav a { color: #ccc; text-decoration: none; transition: color 0.3s; }
-#cv-nav a.active { color: #00bfff; }
-.archive { padding-right: 240px; }
-</style>
-
 <!-- ========== Sections ========== -->
 <h2 id="education">Education</h2>
 * Ph.D in Version Control Theory, GitHub University, 2018 (expected)
