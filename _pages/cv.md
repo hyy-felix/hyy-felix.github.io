@@ -7,6 +7,13 @@ redirect_from:
   - /resume
 ---
 
+<h1 class="page__title">
+  Résumé
+  <a href="{{ '/files/Resume_520.pdf' | relative_url }}" title="Download PDF" download>
+    <img src="{{ '/assets/icons/pdf-icon.png' | relative_url }}" alt="PDF" style="height: 1em; margin-left: 0.5rem; vertical-align: middle;">
+  </a>
+</h1>
+
 <!-- ========== Scroll Navigation ========== -->
 <nav id="cv-nav">
   <ul>
