@@ -35,7 +35,7 @@ redirect_from:
 #cv-nav li { margin-bottom: 0.6em; }
 #cv-nav a { color: #ccc; text-decoration: none; transition: color 0.3s; }
 #cv-nav a.active { color: #52ADC8; }
-.archive { padding-right: 240px; }
+.archive { padding-right: 240px; font-weight: bold;}
 </style>
 
 <!-- ========== Sections ========== -->
