@@ -231,6 +231,9 @@ collections:
   contact:
     output: true
     permalink: /:collection/:path/
+  cv:
+    output: false
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
