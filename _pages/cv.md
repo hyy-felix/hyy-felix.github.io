@@ -40,43 +40,78 @@ redirect_from:
 </style>
 
 <!-- ========== Sections ========== -->
-<h2 id="education">Education</h2>
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
 
-<h2 id="work">Work experience</h2>
-* Spring 2024: Academic Pages Collaborator  
-  * Duties: Template updates, GitHub University  
-* Fall 2015: Research Assistant  
-  * Duties: Merging PRs  
-* Summer 2015: Research Assistant  
-  * Duties: Tagging issues
+<div class="cv-section" id="education">
+  <h2>Education</h2>
+  <ul>
+    <li>Ph.D in Version Control Theory, GitHub University, 2018 (expected)</li>
+    <li>M.S. in Jekyll, GitHub University, 2014</li>
+    <li>B.S. in GitHub, GitHub University, 2012</li>
+  </ul>
+</div>
 
-<h2 id="skills">Skills</h2>
-* Skill 1  
-* Skill 2  
-  * Sub-skill 2.1  
-  * Sub-skill 2.2  
-* Skill 3
+<div class="cv-section" id="work">
+  <h2>Work experience</h2>
+  <ul>
+    <li>Spring 2024: Academic Pages Collaborator
+      <ul><li>Duties: Template updates, GitHub University</li></ul>
+    </li>
+    <li>Fall 2015: Research Assistant
+      <ul><li>Duties: Merging PRs</li></ul>
+    </li>
+    <li>Summer 2015: Research Assistant
+      <ul><li>Duties: Tagging issues</li></ul>
+    </li>
+  </ul>
+</div>
 
-<h2 id="publications">Publications</h2>
-<ul>{% for post in site.publications reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}</ul>
+<div class="cv-section" id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>Skill 1</li>
+    <li>Skill 2
+      <ul>
+        <li>Sub-skill 2.1</li>
+        <li>Sub-skill 2.2</li>
+      </ul>
+    </li>
+    <li>Skill 3</li>
+  </ul>
+</div>
 
-<h2 id="talks">Talks</h2>
-<ul>{% for post in site.talks reversed %}
-  {% include archive-single-talk-cv.html  %}
-{% endfor %}</ul>
+<div class="cv-section" id="publications">
+  <h2>Publications</h2>
+  <ul>
+    {% for post in site.publications reversed %}
+      {% include archive-single-cv.html %}
+    {% endfor %}
+  </ul>
+</div>
 
-<h2 id="teaching">Teaching</h2>
-<ul>{% for post in site.teaching reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}</ul>
+<div class="cv-section" id="talks">
+  <h2>Talks</h2>
+  <ul>
+    {% for post in site.talks reversed %}
+      {% include archive-single-talk-cv.html %}
+    {% endfor %}
+  </ul>
+</div>
 
-<h2 id="service">Service and leadership</h2>
-* Currently signed in to 43 different Slack teams
+<div class="cv-section" id="teaching">
+  <h2>Teaching</h2>
+  <ul>
+    {% for post in site.teaching reversed %}
+      {% include archive-single-cv.html %}
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="cv-section" id="service">
+  <h2>Service and leadership</h2>
+  <ul>
+    <li>Currently signed in to 43 different Slack teams</li>
+  </ul>
+</div>
 
 <!-- ========== ScrollSpy Script ========== -->
 <script>
