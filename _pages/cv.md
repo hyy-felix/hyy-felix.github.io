@@ -7,13 +7,6 @@ redirect_from:
   - /resume
 ---
 
-<a href="{{ '/files/Resume_520.pdf' | relative_url }}"
-   title="Download Résumé PDF"
-   download
-   style="float: right; font-size: 2rem; margin-top: -2rem; margin-right: 3rem;">
-  <i class="fas fa-file-pdf" style="color: var(--global-link-color);"></i>
-</a>
-
 <!-- ========== Scroll Navigation ========== -->
 <nav id="cv-nav">
   <ul>
