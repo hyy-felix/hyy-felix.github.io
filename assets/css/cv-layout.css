@@ -44,7 +44,7 @@
 #cv-nav {
   position: fixed;
   top: 120px;
-  right: calc((100% - max-width) / 2);
+  right: calc((100% - 1000px) + 200px/ 2);
   width: 180px;
   z-index: 10;
 }
