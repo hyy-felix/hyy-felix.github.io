@@ -1,18 +1,18 @@
 ---
 layout: archive
-<!--title: "Resume"-->
+title: "Resume"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
 
-<h1 class="page__title">
-  Résumé
-  <a href="{{ '/files/Resume_520.pdf' | relative_url }}" title="Download PDF" download style="margin-left: 0.5rem;">
-    <i class="fas fa-file-pdf" style="color: var(--global-link-color);"></i>
-  </a>
-</h1>
+<a href="{{ '/files/Resume_520.pdf' | relative_url }}"
+   title="Download Résumé PDF"
+   download
+   style="float: right; font-size: 1.2rem; margin-top: -2.5rem;">
+  <i class="fas fa-file-pdf" style="color: var(--global-link-color);"></i>
+</a>
 
 <!-- ========== Scroll Navigation ========== -->
 <nav id="cv-nav">
