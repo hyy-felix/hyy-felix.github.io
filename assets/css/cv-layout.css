@@ -24,7 +24,7 @@
 }
 
 .cv-container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -44,7 +44,7 @@
 #cv-nav {
   position: fixed;
   top: 120px;
-  right: calc((100% - 1000px) / 2 - - 40px);
+  right: calc((100% - 1100px) / 2);
   width: 180px;
   z-index: 10;
 }
