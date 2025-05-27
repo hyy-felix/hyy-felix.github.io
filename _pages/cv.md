@@ -29,7 +29,7 @@ redirect_from:
 #cv-nav li { margin-bottom: 0.6em; }
 #cv-nav a {  position: relative; display: block; padding-left: 0.5rem; color: var(--global-primary-color); text-decoration: none; transition: color 0.3s; }
 #cv-nav a.active { color: var(--global-link-color); font-weight: bold;}
-#cv-nav a.active::before {content: ""; position: absolute; left: 0; top: 0.6em; height: 1.8em; width: 3px; background-color: var(--global-link-color); }
+#cv-nav a.active::before {content: ""; position: absolute; left: 0; height: 1.8em; width: 3px; background-color: var(--global-link-color); }
 .archive { padding-right: 240px;}
 </style>
 
