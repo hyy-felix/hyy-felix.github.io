@@ -24,7 +24,7 @@ redirect_from:
 
 <!-- ========== CSS layout ========== -->
 <style>
-#cv-nav {position: relative; top: 120px; right: calc((100% - 1100px) / 2); width: 180px; z-index: 10; padding-left: 1rem;}
+#cv-nav {position: fixed; top: 50px; right: calc((100% - 1100px) / 2); width: 180px; z-index: 10; padding-left: 1rem;}
 #cv-nav ul { list-style: none; padding-left: 0; margin: 0; }
 #cv-nav li { margin-bottom: 0.6em; }
 #cv-nav a { color: var(--global-primary-color); text-decoration: none; transition: color 0.3s; }
