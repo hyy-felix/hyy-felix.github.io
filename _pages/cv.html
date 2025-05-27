@@ -48,7 +48,46 @@ redirect_from:
 .archive { padding-right: 240px;}
 </style>
 
+<!-- ========== CV card layout ========== -->
+<style>
+.cv-card { background-color: var(--global-bg-color); border: 1px solid var(--global-border-color); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 1.2rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);}
+.cv-card-header { display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--global-muted-color, #888);}
+.cv-date-tag { background-color: #0891b2; color: white; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: bold; font-size: 0.75rem;}
+.cv-institution { font-size: 1rem; font-weight: bold; color: var(--global-link-color); margin: 0.3rem 0;}
+.cv-degree {margin: 0; font-weight: normal;}
+</style>
+
 <!-- ========== Sections ========== -->
+<div class="cv-section" id="education">
+  <h2>Education</h2>
+
+  <div class="cv-card">
+    <div class="cv-card-header">
+      <span class="cv-date cv-date-tag">2018 (expected)</span>
+      <span class="cv-location"><i class="fas fa-map-marker-alt"></i> GitHub University</span>
+    </div>
+    <h3 class="cv-institution">GitHub University</h3>
+    <p class="cv-degree">Ph.D in Version Control Theory</p>
+  </div>
+
+  <div class="cv-card">
+    <div class="cv-card-header">
+      <span class="cv-date cv-date-tag">2014</span>
+      <span class="cv-location"><i class="fas fa-map-marker-alt"></i> GitHub University</span>
+    </div>
+    <h3 class="cv-institution">GitHub University</h3>
+    <p class="cv-degree">M.S. in Jekyll</p>
+  </div>
+
+  <div class="cv-card">
+    <div class="cv-card-header">
+      <span class="cv-date cv-date-tag">2012</span>
+      <span class="cv-location"><i class="fas fa-map-marker-alt"></i> GitHub University</span>
+    </div>
+    <h3 class="cv-institution">GitHub University</h3>
+    <p class="cv-degree">B.S. in GitHub</p>
+  </div>
+</div>
 
 <h2 id="education">Education</h2>
 * Ph.D in Version Control Theory, GitHub University, 2018 (expected)
