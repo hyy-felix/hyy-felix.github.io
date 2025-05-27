@@ -11,7 +11,7 @@ redirect_from:
 .resume-download-icon {
   position: absolute;
   top: 0;
-  right: -3rem; /* 向右偏移一点，避免贴太近标题文字 */
+  right: -3rem;
   font-size: 1.5rem;
   color: var(--global-link-color);
   text-decoration: none;
