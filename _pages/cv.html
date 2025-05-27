@@ -120,163 +120,45 @@ body.page-cv .archive {
   padding-top: 0.5rem;
 }
 </style>
+<!--column layout-->
+<style>
+.skill-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skill-column {
+  width: 50%;
+}
+
+.skill-column h3 {
+  color: var(--global-link-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.skill-column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-column li {
+  margin-bottom: 0.3rem;
+}
+
+.skill-divider {
+  border: none;
+  border-top: 1px solid var(--global-border-color);
+  margin: 1.5rem 0;
+}
+</style>
 
 <!-- ========== Sections ========== -->
-
-<!--<div class="cv-section" id="education">
-  <h2>Education</h2>
-
-  <div class="cv-entry-row">
-    <div class="cv-entry-left">
-      <div class="cv-entry-date">2024.08 – PRESENT</div>
-      <div class="cv-entry-location">Berkeley, CA, USA</div>
-    </div>
-    <div class="cv-entry-right">
-      <div class="cv-entry-title">University of California, Berkeley</div>
-      <div class="cv-entry-degree">Master of Engineering</div>
-      <div class="cv-entry-sub">Mechanical Engineering (Control of Robotic and Autonomous Systems)</div>
-    </div>
-  </div>
-
-  <div class="cv-entry-row">
-    <div class="cv-entry-left">
-      <div class="cv-entry-date">2023.01 – 2023.06</div>
-      <div class="cv-entry-location">Odense, Denmark</div>
-    </div>
-    <div class="cv-entry-right">
-      <div class="cv-entry-title">University of Southern Denmark</div>
-      <div class="cv-entry-degree">Semester Exchange</div>
-      <div class="cv-entry-sub">Robotek</div>
-    </div>
-  </div>
-
-  <div class="cv-entry-row">
-    <div class="cv-entry-left">
-      <div class="cv-entry-date">2020.08 – 2024.06</div>
-      <div class="cv-entry-location">Macao SAR</div>
-    </div>
-    <div class="cv-entry-right">
-      <div class="cv-entry-title">University of Macau</div>
-      <div class="cv-entry-degree">Bachelor of Science (Honours)</div>
-      <div class="cv-entry-sub">Electromechanical Engineering</div>
-    </div>
-  </div>
-</div>
-
-<div class="cv-section" id="education">
-  <h2>Education</h2>
-
-  <div class="cv-card">
-    <div class="cv-card-header">
-      <span class="cv-date cv-date-tag">2018 (expected)</span>
-      <span class="cv-location"><i class="fas fa-map-marker-alt"></i> GitHub University</span>
-    </div>
-    <h3 class="cv-institution">GitHub University</h3>
-    <p class="cv-degree">Ph.D in Version Control Theory</p>
-  </div>
-
-  <div class="cv-card">
-    <div class="cv-card-header">
-      <span class="cv-date cv-date-tag">2014</span>
-      <span class="cv-location"><i class="fas fa-map-marker-alt"></i> GitHub University</span>
-    </div>
-    <h3 class="cv-institution">GitHub University</h3>
-    <p class="cv-degree">M.S. in Jekyll</p>
-  </div>
-
-  <div class="cv-card">
-    <div class="cv-card-header">
-      <span class="cv-date cv-date-tag">2012</span>
-      <span class="cv-location"><i class="fas fa-map-marker-alt"></i> GitHub University</span>
-    </div>
-    <h3 class="cv-institution">GitHub University</h3>
-    <p class="cv-degree">B.S. in GitHub</p>
-  </div>
-</div>-->
-
 {% include cv/education.html %}
+{% include cv/skill.html %}
 {% include cv/research.html %}
-
-
-<div class="cv-section">
-  <h2 id="skills">Skills</h2>
-
-  <div class="cv-entry-row">
-    <div class="cv-entry-left">
-      <div class="cv-entry-date"> </div>
-    </div>
-    <div class="cv-entry-right">
-      <ul>
-        <li>Skill 1</li>
-        <li>Skill 2
-          <ul>
-            <li>Sub-skill 2.1</li>
-            <li>Sub-skill 2.2</li>
-          </ul>
-        </li>
-        <li>Skill 3</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="cv-section">
-  <h2 id="publications">Publications</h2>
-
-  <div class="cv-entry-row">
-    <div class="cv-entry-left"></div>
-    <div class="cv-entry-right">
-      <ul>
-        {% for post in site.publications reversed %}
-          {% include archive-single-cv.html %}
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="cv-section">
-  <h2 id="talks">Talks</h2>
-
-  <div class="cv-entry-row">
-    <div class="cv-entry-left"></div>
-    <div class="cv-entry-right">
-      <ul>
-        {% for post in site.talks reversed %}
-          {% include archive-single-talk-cv.html %}
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="cv-section">
-  <h2 id="teaching">Teaching</h2>
-
-  <div class="cv-entry-row">
-    <div class="cv-entry-left"></div>
-    <div class="cv-entry-right">
-      <ul>
-        {% for post in site.teaching reversed %}
-          {% include archive-single-cv.html %}
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="cv-section">
-  <h2 id="service">Service and Leadership</h2>
-
-  <div class="cv-entry-row">
-    <div class="cv-entry-left"></div>
-    <div class="cv-entry-right">
-      <ul>
-        <li>Currently signed in to 43 different Slack teams</li>
-      </ul>
-    </div>
-  </div>
-</div>
 
 <!-- ========== ScrollSpy Script ========== -->
 <script>
