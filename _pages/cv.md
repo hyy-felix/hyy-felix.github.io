@@ -9,8 +9,8 @@ redirect_from:
 
 <h1 class="page__title">
   Résumé
-  <a href="{{ '/files/Resume_520.pdf' | relative_url }}" title="Download PDF" download>
-    <img src="{{ '/assets/icons/pdf-icon.png' | relative_url }}" alt="PDF" style="height: 1em; margin-left: 0.5rem; vertical-align: middle;">
+  <a href="{{ '/assets/files/resume.pdf' | relative_url }}" title="Download PDF" download style="margin-left: 0.5rem;">
+    <i class="fas fa-file-pdf" style="color: var(--global-link-color);"></i>
   </a>
 </h1>
 
