@@ -21,8 +21,9 @@ layout: default
           {{ page.title }}
           {% if page.permalink == "/cv/" %}
             <a href="{{ '/files/Resume_520.pdf' | relative_url }}"
-               title="Download PDF"
-               download
+               title="Open PDF in new tab"
+               target="_blank"
+               rel="noopener"
                class="resume-download-icon">
               <i class="fas fa-file-pdf"></i>
             </a>
