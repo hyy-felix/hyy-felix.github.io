@@ -27,7 +27,7 @@ redirect_from:
 #cv-nav {
   position: fixed;
   top: 120px;
-  right: calc((100% - 1000px) / 2) + 40px;
+  right: calc((100% - 1000px) / 2 - - 40px);
   width: 180px;
   z-index: 10;
 }
