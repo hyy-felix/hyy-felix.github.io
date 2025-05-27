@@ -34,7 +34,7 @@ redirect_from:
 #cv-nav ul { list-style: none; padding-left: 0; margin: 0; }
 #cv-nav li { margin-bottom: 0.6em; }
 #cv-nav a { color: #ccc; text-decoration: none; transition: color 0.3s; }
-#cv-nav a.active { color: #00bfff; }
+#cv-nav a.active { color: var(--global-primary-color); }
 .archive { padding-right: 240px; }
 </style>
 
