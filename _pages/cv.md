@@ -49,6 +49,18 @@ redirect_from:
 </style>
 
 <!-- ========== Sections ========== -->
+
+<!-- ========== Resume Basics Card ========== -->
+<div style="background-color: #1e1e1e; color: #fff; border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
+  <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Basics</h2>
+  <p><strong>Name</strong><br>江德超 | Dechao Jiang</p>
+  <p><strong>Email</strong><br><a href="mailto:dechao823@outlook.com" style="color: #4db8ff;">dechao823@outlook.com</a></p>
+  <p><strong>Email_0</strong><br><a href="mailto:dcjiang@berkeley.edu" style="color: #4db8ff;">dcjiang@berkeley.edu</a></p>
+  <p><strong>Phone</strong><br><a href="tel:+15108334373" style="color: #4db8ff;">+1 (510) 833-4373</a></p>
+  <p><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/dechao-jiang-200984260" target="_blank" style="color: #4db8ff;">dechao-jiang-200984260</a></p>
+  <p><strong>Summary</strong><br>厚德载物，超凡脱俗</p>
+</div>
+
 <h2 id="education">Education</h2>
 * Ph.D in Version Control Theory, GitHub University, 2018 (expected)
 * M.S. in Jekyll, GitHub University, 2014
