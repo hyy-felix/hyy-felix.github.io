@@ -24,7 +24,7 @@
 }
 
 .cv-container {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -44,7 +44,7 @@
 #cv-nav {
   position: fixed;
   top: 120px;
-  right: 10pt;
+  right: cal((100% - 800) / 2);
   width: 180px;
   z-index: 10;
 }
@@ -67,12 +67,6 @@
 
 #cv-nav a.active {
   color: var(--global-primary-color); 
-}
-
-body.page-cv .archive {
-  max-width: 800px;   /* ✅ 控制 resume 页面主内容最大宽度 */
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Ensure main content doesn't get hidden under nav */
