@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 <style>
-.resume-download-icon {position: absolute; top: 0.25rem; right: 0; font-size: 2rem; color: var(--global-link-color); text-decoration: none;}
+.resume-download-icon {position: absolute; top: 0rem; right: 1rem; font-size: 2rem; color: var(--global-link-color); text-decoration: none;}
 .resume-download-icon i { vertical-align: middle;}
 </style>
 
