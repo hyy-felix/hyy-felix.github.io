@@ -17,17 +17,17 @@ layout: default
 
   <div class="archive">
       {% unless page.header.overlay_color or page.header.overlay_image %}
-        <div class="page__title-wrap" style="position: relative;">
-          <h1 class="page__title">{{ page.title }}</h1>
+        <h1 class="page__title" style="display: inline-block; position: relative;">
+          {{ page.title }}
           {% if page.permalink == "/cv/" %}
-            <a href="{{ '/files/Resume.pdf' | relative_url }}"
+            <a href="{{ '/files/Resume_520.pdf' | relative_url }}"
                title="Download PDF"
                download
                class="resume-download-icon">
               <i class="fas fa-file-pdf"></i>
             </a>
           {% endif %}
-        </div>
+        </h1>
       {% endunless %}
     {{ content }}
   </div>
