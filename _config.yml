@@ -28,10 +28,11 @@ author:
   bio              : "Short biography for the left-hand sidebar"
   location         : "Berkeley, CA"
   #employer         : "Red Brick University"
-  uri              : # URL
+  uri              : 
   email            : "hyy.felix@gmail.com"
   wechat           : "Wechat"
   wechat_qr        : "/images/wechat-qr.png"
+  googlemap        : "https://maps.app.goo.gl/W9NgXV7Rz2qgtb6F9"
 
   # Academic websites
   academia         : # URL
