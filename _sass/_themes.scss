@@ -6,6 +6,9 @@
    TYPOGRAPHY
    ========================================================================== */
 
+/* Import Google Inetr font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 /* Used to set the size for <em> */
 $doc-font-size              : 16;
 
@@ -39,9 +42,9 @@ $type-size-6                : 0.75em;   // ~12px
 $type-size-7                : 0.6875em; // ~11px
 $type-size-8                : 0.625em;  // ~10px
 
-$global-font-family         : $sans-serif;
-$header-font-family         : $sans-serif;
-$caption-font-family        : $serif;
+$global-font-family         : 'Inter', $sans-serif;
+$header-font-family         : 'Inter', $sans-serif;
+$caption-font-family        : 'Inter', $serif;
 
 /* ==========================================================================
    Breakpoints
@@ -49,10 +52,10 @@ $caption-font-family        : $serif;
 
 @include breakpoint-set("to ems", true);
 
-$small                      : 600px !default;
+$small                      : 576px !default;
 $medium                     : 768px !default;
-$medium-wide                : 900px !default;
-$large                      : 925px !default;
+$medium-wide                : 992px !default;
+$large                      : 1024px !default;
 $x-large                    : 1280px !default;
 
 /* ==========================================================================

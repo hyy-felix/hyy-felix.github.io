@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Windows 下需要此 gem 提供时区数据
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
 group :jekyll_plugins do
   gem 'jekyll'
   gem 'jekyll-feed'

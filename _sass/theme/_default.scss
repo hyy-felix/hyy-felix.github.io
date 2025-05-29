@@ -9,6 +9,7 @@ $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : #9ba1a6;
 $lighter-gray               : mix(#fff, $gray, 90%);
 
+
 /* Color codes used for the site */
 $danger-color               : #ee5f5b;
 $info-color                 : #2f7f93;
@@ -44,4 +45,5 @@ $sidebar-screen-min-width   : 1024px;
     --global-text-color                 : #{$dark-gray};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$lighter-gray};
+    --global-dark-notice-color          : #fff;
 }

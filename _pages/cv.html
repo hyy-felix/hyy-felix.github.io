@@ -16,12 +16,12 @@ redirect_from:
 <nav id="cv-nav">
   <ul>
     <li><a href="#education">Education</a></li>
-    <li><a href="#work">Work</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#publications">Publications</a></li>
-    <li><a href="#talks">Talks</a></li>
-    <li><a href="#teaching">Teaching</a></li>
-    <li><a href="#service">Service</a></li>
+    <li><a href="#professional">Professional</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#language">Language</a></li>
+    <li><a href="#volunteer">Volunteer</a></li>
   </ul>
 </nav>
 
@@ -29,127 +29,61 @@ redirect_from:
 
 <!-- ========== CSS layout ========== -->
 <style>
-#cv-nav {position: fixed; top: 100px; right: calc((100% - 1200px) / 2); width: 180px; z-index: 10; padding-left: 1rem;}
+#cv-nav {position: fixed; top: 100px; right: 8%; width: 5%; z-index: 10; padding-left: 1rem;}
 #cv-nav ul { list-style: none; padding-left: 0;}
-#cv-nav li { margin: 0.5rem 0; }
-#cv-nav a {  position: relative; display: block; padding-left: 0.5rem; color: var(--global-primary-color); text-decoration: none; transition: color 0.3s; }
+#cv-nav li { margin: 0.6rem 0; }
+#cv-nav a {  position: relative; display: block; font-size: 0.8rem; padding-left: 0.5rem; color: var(--global-primary-color); text-decoration: none; transition: color 0.3s; }
 #cv-nav a.active { color: var(--global-link-color); font-weight: 600; transform: scale(1.2); transform-origin: left center;}
-#cv-nav a.active::before {content: ""; position: absolute; left: 0; height: 1.8em; width: 3px; background-color: var(--global-link-color); }
-.archive { padding-right: 240px;}
+#cv-nav a.active::before {content: ""; position: absolute; left: 0; top: -0.2em; height: 1.8em; width: 3px; background-color: var(--global-link-color); }
+.archive { padding-right: 6%;}
+body.page-cv .archive { padding-top: 0.4rem;}
+/*--============================ small medium improvment========================----*/
+@media (max-width: 992px) {#cv-nav {display: none;}
+.archive {padding-right: 0;}}
 </style>
 <!-- ========== CV card layout ========== -->
 <style>
-.cv-section {
-  background-color: var(--global-bg-color);
-  border: 1px solid var(--global-border-color);
-  border-radius: 10px;
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.cv-entry-row {
-  display: flex;
-  gap: 0.3rem;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--global-border-color);
-}
-
-.cv-entry-row:last-child {
-  border-bottom: none;
-}
-
-.cv-entry-left {
-  width: 25%;
-  min-width: 140px;
-  font-size: 0.8rem;
-  color: var(--global-muted-color);
-}
-
-.cv-entry-date {
-  font-weight: 550;
-  color: var(--global-accent-color);
-}
-
-.cv-entry-location {
-  margin-top: 0;
-}
-
-.cv-entry-right {
-  flex: 1;
-}
-
-.cv-entry-title {
-  font-weight: bold;
-  font-size: 1rem;
-  color: var(--global-link-color);
-}
-
-.cv-entry-degree {
-  margin-top: 0;
-  font-weight: 550;
-}
-
-.cv-entry-sub {
-  font-style: italic;
-  color: var(--global-text-light);
-  font-size: 1rem;
-  margin-top: 0.1rem;
-}
-
-.cv-section h2 {
-  margin-top: 0;
-}
-
-.cv-section:first-of-type {
-  margin-top: 0;
-}
-
-body.page-cv .archive {
-  padding-top: 0.4rem;
-}
+.cv-section { background-color: var(--global-dark-notice-color); border: 1px solid var(--global-border-color); border-radius: 10px; padding: 1.5rem; margin-bottom: 0.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
+.cv-entry-row { display: flex; gap: 0.3rem; padding: 0.5rem 0; border-bottom: 1px solid var(--global-border-color); align-items: baseline;}
+.cv-entry-row:last-child { border-bottom: none;}
+.cv-entry-left { margin: 0; width: 20%;}
+.cv-entry-date { display: inline-flex; align-self:left; align-items: center; justify-content: center; height: auto; padding: 0.1rem 0.5rem; margin: 0; border-radius: 0.25rem; background: var(--global-link-color); font-size: 0.8rem; font-weight: bold; text-decoration: none; color: var(--global-bg-color);}
+.cv-entry-meta { display: flex; flex-direction: column; align-items: flex-start; width: max-content; margin: 0;}
+.cv-entry-location {align-self: center; font-size: 0.7rem; margin: 0.2rem 0 0 0; padding: 0;}
+.cv-entry-right { flex: 1;}
+.cv-entry-title { font-weight: 600; font-size: 1rem; color: var(--global-link-color);}
+.cv-entry-degree { margin-top: 0; font-size: 0.9rem; font-weight: 400;}
+.cv-entry-sub { font-style: italic; font-size: 0.9rem; margin: 0; font-weight: 300;}
+.cv-section h2 { margin-top: 0;}
+.cv-section h3 { margin: 0; font-size: 1rem;}
+.cv-section ul { margin: 0; padding: 0.2rem 0 0 1rem;}
+.cv-section li { margin: 0; font-size: 0.9rem; font-weight: 300; text-align: justify; list-style: circle;}
+.cv-section:first-of-type { margin-top: 0;}
+@media (max-width: 992px) {
+  .cv-section { padding: 1.5rem;}
+  .cv-entry-row { flex-direction: column; align-items: flex-start; /* 顶端对齐 */}
+  .cv-entry-left,
+  .cv-entry-right { width: 100%;}
+  .cv-entry-left { margin-bottom: 0.3rem;}}
 </style>
 <!--column layout-->
 <style>
-.skill-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 0;
-  margin-bottom: 0;
-}
-
-.skill-column {
-  width: 50%;
-}
-
-.skill-column h3 {
-  color: var(--global-link-color);
-  margin: 0 !important;
-  font-weight: 550;
-}
-
-.skill-column ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.skill-column li {
-  margin-bottom: 0;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-.skill-divider {
-  border: none;
-  border-top: 2px solid var(--global-border-color);
-  margin-bottom: 0.5rem;
-}
+.skill-row { display: grid; grid-template-columns: repeat(3, 1fr); justify-content: space-between; gap: 0; margin: 0;}
+.skill-column { width: auto}
+.skill-column h3 { color: var(--global-link-color); margin: 0.4rem 0 0.2rem 1rem; font-weight: 600;}
+.skill-column ul {list-style: none; padding-left: 0; margin-left: 1rem;}
+.skill-column li {margin-bottom: 0; font-size: 0.8em; font-weight: 400; list-style: none; text-align: left;}
+.skill-divider {border: none; border-top: 1px solid var(--global-border-color); margin-bottom: 0.5rem;}
 </style>
 
 <!-- ========== Sections ========== -->
 {% include cv/education.html %}
 {% include cv/skill.html %}
+{% include cv/professional.html %}
 {% include cv/research.html %}
+{% include cv/awards.html %}
+{% include cv/language.html %}
+{% include cv/volunteer.html %}
 
 <!-- ========== ScrollSpy Script ========== -->
 <script>
