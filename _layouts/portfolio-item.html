@@ -1,0 +1,87 @@
+---
+layout: archive
+---
+
+<style>
+  /* 隐藏 archive 布局自动插入的标题 */
+  .archive .page__title { display: none !important; }
+
+  /* —— 顶部大标题 —— */
+  .project-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .project-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--global-link-color);
+    margin-bottom: 0.5rem;
+  }
+
+  /* —— 元数据行 —— */
+  .project-meta,
+  .project-team {
+    font-size: 0.9rem;
+    color: var(--global-text-color);
+    margin: 0.2rem 0;
+  }
+  .project-advisor {
+    font-size: 0.9rem;
+    color: var(--global-text-color);
+    margin: 0.2rem 0;
+  }
+  .project-meta .meta-item {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+
+  /* 只有两项时，两列均分宽度，无额外 margin */
+  .project-meta.two-items .meta-item {
+    width: 50%;
+    text-align: center;
+    margin: 0;
+  }
+
+
+  /* —— 正文内容 —— */
+  .project-content {
+    margin: 0 auto;
+    line-height: 1.7;
+    font-size: 1rem;
+    color: var(--global-body-text-color);
+    padding: 0 1rem;
+  }
+</style>
+
+<div class="project-header">
+  <h1>{{ page.title_item }}</h1>
+
+  {% capture raw_metas %}
+    {% if page.cite %}{{ page.cite }}|{% endif %}
+    {% if page.year %}{{ page.year }}|{% endif %}
+    {% if page.location %}{{ page.location }}|{% endif %}
+  {% endcapture %}
+  {% assign meta_array = raw_metas | split: "|" | where_exp: "m", "m != ''" %}
+
+  <p class="project-meta{% if meta_array.size == 2 %} two-items{% endif %}">
+    {% for item in meta_array %}
+      <span class="meta-item">{{ item }}</span>{% unless forloop.last %}<span class="meta-separator"> | </span>{% endunless %}
+    {% endfor %}
+  </p>
+
+  {% if page.team %}
+    <p class="project-team">Team: {{ page.team }}</p>
+  {% endif %}
+
+  {% if page.advisor %}
+  <p class="project-advisor">Advised by: {{ page.advisor }}</p>
+  {% endif %}
+</div>
+
+
+  
+
+<div class="project-content">
+  {{ content }}
+</div>

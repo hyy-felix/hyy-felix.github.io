@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Sitemap"
+title: "SITEMAP"
 permalink: /sitemap/
 author_profile: true
 ---
