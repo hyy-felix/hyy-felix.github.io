@@ -62,9 +62,12 @@ layout: archive
     font-weight: 700;
     margin-bottom: 0.5rem;
   }
+  .project-content h3 {
+    padding-left: 0.5rem;
+  }
   .project-content ul {
     margin: 0;
-    padding-left: 0;
+    padding-left: 1rem;
   }
   .project-content ol {
     margin: 0 0 0.5rem 0;
@@ -75,6 +78,10 @@ layout: archive
   }
   .project-content li {
     margin: 0 0 0 1rem;
+    padding: 0rem;
+  }
+  .project-content p {
+    padding-left: 1rem;
   }
 
   .sketchfab-embed-wrapper {
@@ -94,6 +101,59 @@ layout: archive
   box-shadow: 0 2px 15px rgba(0,0,0,0.2);
   }
 
+  /* 折叠面板样式 */
+  .collapsible {
+    background-color: var(--global-dark-notice-color);
+    color: var(--global-text-color);
+    cursor: pointer;
+    padding: 0.8rem 1rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    border-radius: 8px;
+    margin: 0.4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    transform-origin: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .collapsible:hover {
+    background-color: var(--global-dark-notice-color);
+    opacity: 0.9;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  .collapsible:after {
+    content: '\002B';
+    color: var(--global-text-color);
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .active:after {
+    content: "\2212";
+  }
+
+  .collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    margin: 0;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .collapsible-content.show {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+  }
+
   @media (max-width: 576px) {
   .sketchfab-embed-wrapper {
     aspect-ratio: 4 / 3;
@@ -109,16 +169,20 @@ layout: archive
 <div class="project-header">
   <h1>{{ page.title_item }}</h1>
 
-  {% capture raw_metas %}
-    {% if page.cite %}{{ page.cite }}|{% endif %}
-    {% if page.year %}{{ page.year }}|{% endif %}
-    {% if page.location %}{{ page.location }}|{% endif %}
-  {% endcapture %}
-  {% assign meta_array = raw_metas | split: "|" | where_exp: "m", "m != ''" %}
+  {% assign meta_array = "" | split: "" %}
+  {% if page.cite %}
+    {% assign meta_array = meta_array | push: page.cite %}
+  {% endif %}
+  {% if page.year %}
+    {% assign meta_array = meta_array | push: page.year %}
+  {% endif %}
+  {% if page.location %}
+    {% assign meta_array = meta_array | push: page.location %}
+  {% endif %}
 
   <p class="project-meta{% if meta_array.size == 2 %} two-items{% endif %}">
     {% for item in meta_array %}
-      <span class="meta-item">{{ item }}</span>{% unless forloop.last %}<span class="meta-separator"> | </span>{% endunless %}
+      <span class="meta-item">{{ item }}</span>{% if forloop.index < meta_array.size %}<span class="meta-separator"> | </span>{% endif %}
     {% endfor %}
   </p>
 

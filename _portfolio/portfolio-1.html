@@ -1,7 +1,7 @@
 ---
 layout: portfolio-item
 title: "L.I.F.T multi-used platform"
-excerpt: "A multi-used platform can morphing from drive mode to flight mode. Based on ABS 3D printing frame, equipped with ROS2 based MPC controller. <br/><img src='/images/500x300.png'>"
+excerpt: "A multi-used platform can morphing from drive mode to flight mode. Based on ABS 3D printing frame, equipped with ROS2 based MPC controller. <br/><img src='/images/LIFT.png'>"
 title_item: "A Hybrid Flying and Driving Robot For Safe Exploration of Hazardous Environments"
 team: "Eric Pham, Felix Hu, Jeremy Chen, Junyu Lu, Max Freeman"
 advisor: "Professor Francesco Borrelli & Fionna Kopp"
@@ -22,7 +22,10 @@ collection: portfolio
 </section>
 
 <section class="project-content">
-  <h2>3D overview of the steering wheel</h2>
+  <h2>3D Model Overview of L.I.F.T Platform</h2>
+  
+  <button class="collapsible">Flight Mode View</button>
+  <div class="collapsible-content">
     <div class="sketchfab-embed-wrapper"> 
       <iframe title="lift flight" 
       frameborder="0" 
@@ -36,48 +39,91 @@ collection: portfolio
       web-share 
       src="https://sketchfab.com/models/33010228e7c448878fe9a96b1ad51b67/embed"> 
     </iframe> 
+    </div>
+    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A; text-align: center;" > 
+      <a href="https://sketchfab.com/3d-models/lift-flight-33010228e7c448878fe9a96b1ad51b67?utm_medium=embed&utm_campaign=share-popup&utm_content=33010228e7c448878fe9a96b1ad51b67" 
+        target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> 
+        LIFT_flight </a><span style="color: var(--global-text-color);"> by </span><a href="https://sketchfab.com/hyy20020204?utm_medium=embed&utm_campaign=share-popup&utm_content=33010228e7c448878fe9a96b1ad51b67" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Felix Hu </a><span style="color: var(--global-text-color);"> on </span><a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=33010228e7c448878fe9a96b1ad51b67" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+    </p>
   </div>
 
-  <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A; text-align: center;" > 
-    <a href="https://sketchfab.com/3d-models/lift-flight-33010228e7c448878fe9a96b1ad51b67?utm_medium=embed&utm_campaign=share-popup&utm_content=33010228e7c448878fe9a96b1ad51b67" 
-      target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> 
-      LIFT_flight </a> by <a href="https://sketchfab.com/hyy20020204?utm_medium=embed&utm_campaign=share-popup&utm_content=33010228e7c448878fe9a96b1ad51b67" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Felix Hu </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=33010228e7c448878fe9a96b1ad51b67" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
-</section>
+  <button class="collapsible">Drive Mode View</button>
+  <div class="collapsible-content">
+    <div class="sketchfab-embed-wrapper"> 
+      <iframe title="lift car" 
+      frameborder="0" 
+      allowfullscreen 
+      mozallowfullscreen="true" 
+      webkitallowfullscreen="true" 
+      allow="autoplay; fullscreen; xr-spatial-tracking" 
+      xr-spatial-tracking 
+      execution-while-out-of-viewport 
+      execution-while-not-rendered 
+      web-share 
+      src="https://sketchfab.com/models/49f59ad6ca574df0855d6103aeb7795d/embed"> 
+    </iframe> 
+    </div>
+    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A; text-align: center;"> 
+      <a href="https://sketchfab.com/3d-models/lift-car-49f59ad6ca574df0855d6103aeb7795d?utm_medium=embed&utm_campaign=share-popup&utm_content=49f59ad6ca574df0855d6103aeb7795d" 
+        target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> 
+        lift car </a><span style="color: var(--global-text-color);"> by </span><a href="https://sketchfab.com/hyy20020204?utm_medium=embed&utm_campaign=share-popup&utm_content=49f59ad6ca574df0855d6103aeb7795d" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Felix Hu </a><span style="color: var(--global-text-color);"> on </span><a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=49f59ad6ca574df0855d6103aeb7795d" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+    </p>
+  </div>
 
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.classList.contains("show")) {
+          content.classList.remove("show");
+          content.style.maxHeight = "0";
+        } else {
+          content.classList.add("show");
+          content.style.maxHeight = "500px";
+        }
+      });
+    }
+  </script>
+</section>
 
 <section class="project-content">
-    <h2>Platform Description</h2>
-    <ul>
-    It is designed to operate in hazardous, confined, or otherwise inaccessible environments. The use of simple 3D-printed components allows for easy field assembly and repair, making it a versatile solution for applications ranging from search-and-rescue, last-mile delivery, surveying civil structures, and military demining.
-    </ul>
+  <h2>Platform Description</h2>
+  <h3>Project Goal</h3>
+  <p>The L.I.F.T. (Land and Integrated Flight Transition) Platform is a hybrid robotic system built to overcome the limitations of conventional single-mode robots in hazardous and inaccessible environments. The platform is engineered for both aerial and ground mobility, offering cost-effective and field-ready deployment.</p>
+
+  <h3>What It Can Do</h3>
+  <ul>
+      <li>Provides dual-mode locomotion—rugged ground navigation and quadcopter flight with vertical takeoff and landing.</li>
+      <li>Utilizes a single drivetrain system for both wheels and propellers, reducing system complexity and weight.</li>
+      <li>Features fully 3D-printed modular components for ease of assembly, maintenance, and repair in the field.</li>
+      <li>Supports a range of applications including search-and-rescue, infrastructure inspection, reconnaissance, and last-mile delivery.</li>
+  </ul>
 </section>
   
-  <section class="project-content">
-    <h2>Our Approach: A Three-Stage Validation of Dual-Mode Mobility</h2>
-    <ol>
-      <li>
-        <strong>Prototype Development</strong>
-        <ul>
-          <li>Goal: Establish system integration feasibility</li>
-          <li>Design and build a dual-mode physical platform</li>
-          <li>Enable easy field assembly and repair (3D-printed components)</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Ground Autonomy</strong>
-        <ul>
-          <li>Goal: Demonstrate autonomous navigation</li>
-          <li>Implement Model Predictive Control (MPC) for driving</li>
-          <li>Validate performance in both simulations and real-world tests</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Flight Demonstration</strong>
-        <ul>
-          <li>Goal: Evaluate feasibility of aerial operation</li>
-          <li>Test flight stability via tethered joystick control</li>
-          <li>Assess mechanical and control readiness for flight</li>
-        </ul>
-      </li>
-    </ol>
-  </section>
+<section class="project-content">
+  <h2>Development Process</h2>
+
+  <h3>Step 1: Define Constraints and Objectives</h3>
+  <p>The design process was guided by physical, electrical, and logistical constraints. The platform needed to be compact and lightweight for flight, robust for ground traversal, and feasible to prototype within a 9-month period using accessible tools and materials.</p>
+
+  <h3>Step 2: Component Selection and Architecture Design</h3>
+  <ul>
+      <li>Selected the MJ5208 brushless motor to handle both high-torque (driving) and high-speed (flight) demands.</li>
+      <li>Adopted a folding-arm architecture for effective mode switching, ease of fabrication, and compact storage.</li>
+  </ul>
+
+  <h3>Step 3: Structural and Performance Optimization</h3>
+  <ul>
+      <li>Performed thrust testing with various propeller and voltage configurations to validate flight viability.</li>
+      <li>Implemented FEA-based mass optimization, achieving a 17% weight reduction without compromising strength.</li>
+  </ul>
+
+  <h3>Step 4: System Integration and Testing</h3>
+  <ul>
+      <li>Integrated key electronics: NVIDIA Jetson board, Arduino Nano, motor controllers, and a centralized power system.</li>
+      <li>Demonstrated autonomous ground navigation via MPC in simulation and physical obstacle trials.</li>
+      <li>Executed tethered flight tests to validate lift capability and basic flight control under constrained conditions.</li>
+  </ul>
+</section>
