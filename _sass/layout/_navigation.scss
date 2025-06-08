@@ -130,13 +130,20 @@
     font-size: $type-size-5;
     font-weight: bold;
     text-align: center;
-    text-decoration: none;
+    text-decoration: none !important;
     color: var(--global-text-color-light);
     border: 1px solid var(--global-border-color);
     border-radius: $border-radius;
+    transition: all 0.3s ease;
+    background-color: var(--global-bg-color);
 
     &:hover {
-      color: var(--global-link-color-hover);
+      color: var(--global-text-color);
+      text-decoration: none !important;
+      background-color: var(--global-dark-notice-color);
+      border-color: var(--global-dark-notice-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     &:first-child {
@@ -154,6 +161,7 @@
       color: var(--global-text-color-light);
       pointer-events: none;
       cursor: not-allowed;
+      opacity: 0.5;
     }
   }
 }

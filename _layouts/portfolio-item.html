@@ -164,6 +164,55 @@ layout: archive
     padding: 0; 
   }
 }
+
+.project-team {
+  font-size: 0.9rem;
+  color: var(--global-text-color);
+  margin: 0.2rem 0;
+  font-weight: 300;
+}
+
+.team-members {
+  display: inline;
+}
+
+.team-members .member {
+  display: inline;
+}
+
+.team-members .member:not(:last-child)::after {
+  content: ", ";
+}
+
+/* 默认状态：只显示前三个 */
+.team-members .member:nth-child(3)::after {
+  content: " ...";
+}
+
+.team-members .member:nth-child(n+4) {
+  display: none;
+}
+
+/* 展开状态：显示所有 */
+.team-members.expanded .member:nth-child(3)::after {
+  content: ", ";
+}
+
+.team-members.expanded .member:nth-child(n+4) {
+  display: inline !important;
+}
+
+.team-trigger {
+  color: var(--global-link-color);
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline-block;
+  margin-left: 0.3rem;
+}
+
+.team-trigger:hover {
+  opacity: 0.8;
+}
 </style>
 
 <div class="project-header">
@@ -187,7 +236,18 @@ layout: archive
   </p>
 
   {% if page.team %}
-    <p class="project-team">Team: {{ page.team }}</p>
+    {% assign team_members = page.team | split: ", " %}
+    <p class="project-team">
+      Team: 
+      <span class="team-members">
+        {% for member in team_members %}
+          <span class="member">{{ member }}</span>
+        {% endfor %}
+      </span>
+      {% if team_members.size > 3 %}
+        <span class="team-trigger" onclick="toggleTeamMembers(this)">Show all</span>
+      {% endif %}
+    </p>
   {% endif %}
 
   {% if page.advisor %}
@@ -195,9 +255,26 @@ layout: archive
   {% endif %}
 </div>
 
-
-  
-
 <div class="project-content">
   {{ content }}
 </div>
+
+<div class="page__inner-wrap">
+  {% if page.share %}{% include social-share.html %}{% endif %}
+  {% include post_pagination.html %}
+</div>
+
+<script>
+  function toggleTeamMembers(element) {
+    const teamMembers = element.previousElementSibling;
+    const isExpanded = teamMembers.classList.contains('expanded');
+    
+    if (isExpanded) {
+      teamMembers.classList.remove('expanded');
+      element.textContent = 'Show all';
+    } else {
+      teamMembers.classList.add('expanded');
+      element.textContent = 'Hide';
+    }
+  }
+</script> 
