@@ -1,0 +1,6 @@
+# Local development override
+# This file overrides settings for local development
+# It prevents absolute URLs from breaking local network access
+
+url: ""  # Empty URL for local development allows relative paths
+
